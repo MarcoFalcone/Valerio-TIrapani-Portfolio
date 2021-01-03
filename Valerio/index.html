@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valerio Tirapani</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Marco Falcone: marcofalcone.dev">
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="name">Valerio Tirapani</div>
+  <div class="bar">
+    <div class="gallery">galleria</div>
+    <div class="about">chi sono</div>
+    <div class="contact">contatti</div>
+  </div>
+<div class="main" >
+  <div class="frame">
+
+      <img id="a" class="foto" src="test.jpg" />
+      <img id="b" class="foto" src="test3.jpg" />
+      <img id="c" class="foto" src="test5.jpg" />
+      <img id="d" class="foto" src="1.jpg" />
+      <img id="e" class="foto" src="2.jpg" />
+      <img id="f" class="foto" src="3.jpg" />
+
+
+</div>
+</div>
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("foto");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.opacity= 0;
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.opacity= 1;
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+</script>
+</body>
+
+</html>

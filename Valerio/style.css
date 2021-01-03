@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(back.png);
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  position: absolute;
+  bottom: 10%;
+  left: 500px;
+}
+
+.name {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  font-size: 80px;
+  display: flex;
+  margin-left: 260px;
+  height: 80px;
+  bottom: 23%;
+  position: absolute;
+  color: dimgray;
+}
+
+.about,
+.gallery,
+.contact {
+  font-family: 'Redressed', cursive;
+  margin-right: 20px;
+  font-size: 30px;
+  color: dimgray;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.about:hover,
+.gallery:hover,
+.contact:hover {
+  color: black;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  border:solid 2px;
+  border-bottom-color:#ffe;
+  border-left-color:#eed;
+  border-right-color:#eed;
+  border-top-color:#ccb;
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  transition: opacity 2s ease-in-out;
+}
+
+
+.frame {
+  background-color: oldlace;
+  border:solid 4vmin #eee;
+  border-bottom-color:#fff;
+  border-left-color:#eee;
+  border-radius:2px;
+  border-right-color:#eee;
+  border-top-color:#fff;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+  box-sizing:border-box;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:80vh;
+  width: 35vw;
+  padding:4vmin;
+  position:absolute;
+  &:before {
+    border-radius:2px;
+    bottom:-2vmin;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+    content:"";
+    left:-2vmin;
+    position:absolute;
+    right:-2vmin;
+    top:-2vmin;
+  }
+  &:after {
+    border-radius:2px;
+    bottom:-2.5vmin;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+    content:"";
+    left:-2.5vmin;
+    position:absolute;
+    right:-2.5vmin;
+    top:-2.5vmin;
+  }
+}
