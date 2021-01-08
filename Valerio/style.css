@@ -59,14 +59,14 @@ img {
   border-right-color:#eed;
   border-top-color:#ccb;
   width: 80%;
-  height: 80%;
+  height: 83%;
   position: absolute;
-  transition: opacity 2s ease-in-out;
+  transition: opacity 1.5s linear;
 }
 
 
 .frame {
-  background-color: oldlace;
+  background-color: whitesmoke;
   border:solid 4vmin #eee;
   border-bottom-color:#fff;
   border-left-color:#eee;
@@ -82,24 +82,4 @@ img {
   width: 35vw;
   padding:4vmin;
   position:absolute;
-  &:before {
-    border-radius:2px;
-    bottom:-2vmin;
-    box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
-    content:"";
-    left:-2vmin;
-    position:absolute;
-    right:-2vmin;
-    top:-2vmin;
-  }
-  &:after {
-    border-radius:2px;
-    bottom:-2.5vmin;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
-    content:"";
-    left:-2.5vmin;
-    position:absolute;
-    right:-2.5vmin;
-    top:-2.5vmin;
-  }
 }
