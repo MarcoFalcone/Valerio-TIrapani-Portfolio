@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Valerio Tirapani</title>
   <meta charset="utf-8">
@@ -11,42 +12,74 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="name">Valerio Tirapani</div>
-  <div class="bar">
-    <div class="gallery">galleria</div>
-    <div class="about">chi sono</div>
-    <div class="contact">contatti</div>
+  <div class="home">
+    <div class="name">Valerio Tirapani</div>
+    <div class="navbarhome">
+      <div class="galleria">galleria</div>
+      <div class="chisono">chi sono</div>
+      <div class="contatti">contatti</div>
+    </div>
+    <div class="mainhome">
+      <div class="frame">
+        <img id="preview" class="foto" src="images/test.jpg" />
+        <img id="preview" class="foto" src="images/test3.jpg" />
+        <img id="preview" class="foto" src="images/test5.jpg" />
+        <img id="preview" class="foto" src="images/test4.jpg" />
+      </div>
+    </div>
   </div>
-<div class="main" >
-  <div class="frame">
+      <div class="navbar" style="display: none">
+        <div>
+          <div class="namenavbar">Valerio Tirapani</div>
+        </div>
+        <div class="bar" >
+          <div class="gallerianavbar">galleria</div>
+          <div class="chisononavbar">chi sono</div>
+          <div class="contattinavbar">contatti</div>
+        </div>
+      </div>
+      <div class="gallery" style="display: none">
+        <div class="column">
+            <img id="fotogallery" src="images/test.jpg" />
+            <img id="fotogallery" src="images/1.jpg" />
+            <img id="fotogallery" src="images/test3.jpg" />
+            <img id="fotogallery" src="images/test5.jpg" />
+            <img id="fotogallery" src="images/2.jpg" />
+            <img id="fotogallery" src="images/test4.jpg" />
+            <img id="fotogallery" src="images/3.jpg" />
+          </div>
+          <div class="column">
+            <img id="fotogallery" src="images/1.jpg" />
+            <img id="fotogallery" src="images/test5.jpg" />
+            <img id="fotogallery" src="images/2.jpg" />
+            <img id="fotogallery" src="images/test3.jpg" />
+            <img id="fotogallery" src="images/test4.jpg" />
+            <img id="fotogallery" src="images/3.jpg" />
+            <img id="fotogallery" src="images/test.jpg" />
+          </div>
+            <div class="column">
+              <img id="fotogallery" src="images/3.jpg" />
+            <img id="fotogallery" src="images/test3.jpg" />
+            <img id="fotogallery" src="images/1.jpg" />
+            <img id="fotogallery" src="images/test5.jpg" />
+            <img id="fotogallery" src="images/test4.jpg" />
+            <img id="fotogallery" src="images/test.jpg" />
+            <img id="fotogallery" src="images/2.jpg" />
+          </div>
+      </div>
+    <div class="aboutme" style="display: none">
+        <img class="profilo" src="profilo.jpg" />
+        <div class="txt">Sono nato a Roma nell’aprile del ’90. Ho frequentato il Liceo Artistico Ripetta. Dipingo vivo e lavoro a Roma. Autodidatta.</div>
+    </div>
+    <div class="contacts" style="display: none">
+          <p>+39 334 2792 206</p>
+          <p>info@valeriotirapani.it</p>
+      </div>
 
-      <img id="a" class="foto" src="test.jpg" />
-      <img id="b" class="foto" src="test3.jpg" />
-      <img id="c" class="foto" src="test5.jpg" />
-      <img id="d" class="foto" src="test4.jpg" />
-
-
-</div>
-</div>
-
-
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("foto");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.opacity= 0;
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.opacity= 1;
-  setTimeout(showSlides, 3000); // Change image every 2 seconds
-}
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
