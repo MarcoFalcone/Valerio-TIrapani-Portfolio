@@ -209,6 +209,11 @@ body {
   font-size: 50px;
 }
 
+.contacts a {
+  color: black;
+  text-decoration: underline dimgray;
+}
+
 .slidename {
   transform: translateX(-200px);
 }
@@ -318,25 +323,7 @@ body {
   }
 
   .contacts {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-size: 30px;
-    margin-top: 100px;
-  }
-
-.contacts {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  margin-top: 100px;
   }
 
   .contacts a {
