@@ -114,8 +114,12 @@ body {
 }
 
 .home {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -452,6 +456,10 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
+  .home {
+    top: 40%;
+  }
+
   .name {
     font-size: 75px;
   }
