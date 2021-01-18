@@ -337,7 +337,7 @@ body {
 
 #fotogallery {
   height: auto;
-  width: 600px;
+  width: 31.25vw;
   margin: 5px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -347,25 +347,25 @@ body {
 
 .aboutme {
   width: 100%;
-  height: auto;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-  top: 100px;
 }
 
 
 .profilo {
   width: 400px;
   height: auto;
-  margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 .txt {
@@ -511,28 +511,13 @@ body {
   }
 
   .aboutme {
-    width: 100vw;
     height: auto;
-    top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin-top: 20px;
   }
 
   .profilo {
     width: 70%;
     height: auto;
-    margin-top: 20px;
     margin-bottom: 20px;
     margin-right: 0;
     padding: 10px;
