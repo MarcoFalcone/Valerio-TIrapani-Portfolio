@@ -1,3 +1,16 @@
+//loader and lightbox//
+$(window).on('load', function(){
+  $('.loader').fadeOut(1000);
+  $('.content').fadeIn(1000);
+  $('[data-fancybox="images"]').fancybox({
+    infobar: false,
+    buttons : [
+      'close'
+    ],
+  });
+
+});
+
 //image automatic carousel//
 var slideIndex = 0;
 showSlides();
@@ -15,22 +28,6 @@ function showSlides() {
   slides[slideIndex - 1].style.opacity = 1;
   setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
-
-
-//loader//
-$(window).on('load', function(){
-
-  $('.content').fadeIn(1000);
-  $('[data-fancybox="images"]').fancybox({
-    infobar: false,
-    buttons : [
-      'close'
-    ],
-  });
-
-});
-
-
 
 $('.galleria').click(function(e) {
   $('.home').fadeOut(400);
