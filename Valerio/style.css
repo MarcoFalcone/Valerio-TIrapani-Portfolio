@@ -266,6 +266,12 @@ body {
           justify-content: space-around;
 }
 
+.bar {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+}
+
 .namenavbar {
   font-size: 80px;
   font-family: 'Herr Von Muellerhoff', cursive;
@@ -483,8 +489,15 @@ body {
 
   .navbar {
     width: 100%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+
+  .bar {
+    width: 100%;
+    justify-content: space-around;
   }
 
   .namenavbar {
@@ -543,5 +556,6 @@ body {
 
   .footer {
     top: 0;
+    height: 10px;
   }
 }
