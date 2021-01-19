@@ -1,14 +1,7 @@
 //loader and lightbox//
-$(window).on('load', function(){
+$(window).on('load', function() {
   $('.loader').fadeOut(1000);
   $('.content').fadeIn(1000);
-  $('[data-fancybox="images"]').fancybox({
-    infobar: false,
-    buttons : [
-      'close'
-    ],
-  });
-
 });
 
 //image automatic carousel//
@@ -29,70 +22,82 @@ function showSlides() {
   setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
 
-$('.galleria').click(function(e) {
-  $('.home').fadeOut(400);
-  $('.name').addClass('slidename');
-  $('.galleria').addClass('slidegalleria');
-  $('.chisono').addClass('slidechisono');
-  $('.contatti').addClass('slidecontatti');
-  $('.frame').addClass('slideframe');
-  $('.gallery').delay(400).fadeIn(1000);
-  $('.navbar').delay(400).fadeIn(1000);
-});
+//fancybox
+$(document).ready(function() {
+  $('[data-fancybox="images"]').fancybox({
+    infobar: false,
+    buttons: [
+      'close'
+    ],
+  });
+})
 
+//navigation
+$(document).ready(function() {
+  $('.galleria').click(function(e) {
+    $('.home').fadeOut(400);
+    $('.name').addClass('slidename');
+    $('.galleria').addClass('slidegalleria');
+    $('.chisono').addClass('slidechisono');
+    $('.contatti').addClass('slidecontatti');
+    $('.frame').addClass('slideframe');
+    $('.gallery').delay(400).fadeIn(1000);
+    $('.navbar').delay(400).fadeIn(1000);
+  });
 
-$('.chisono').click(function(e) {
-  $('.home').fadeOut(400);
-  $('.name').addClass('slidename');
-  $('.galleria').addClass('slidegalleria');
-  $('.chisono').addClass('slidechisono');
-  $('.contatti').addClass('slidecontatti');
-  $('.frame').addClass('slideframe');
-  $('.aboutme').delay(400).fadeIn(1000);
-  $('.navbar').delay(400).fadeIn(1000);
-});
+  $('.chisono').click(function(e) {
+    $('.home').fadeOut(400);
+    $('.name').addClass('slidename');
+    $('.galleria').addClass('slidegalleria');
+    $('.chisono').addClass('slidechisono');
+    $('.contatti').addClass('slidecontatti');
+    $('.frame').addClass('slideframe');
+    $('.aboutme').delay(400).fadeIn(1000);
+    $('.navbar').delay(400).fadeIn(1000);
+  });
 
-$('.contatti').click(function(e) {
-  $('.home').fadeOut(400);
-  $('.name').addClass('slidename');
-  $('.galleria').addClass('slidegalleria');
-  $('.chisono').addClass('slidechisono');
-  $('.contatti').addClass('slidecontatti');
-  $('.frame').addClass('slideframe');
-  $('.contacts').delay(400).fadeIn(1000);
-  $('.navbar').delay(400).fadeIn(1000);
-});
+  $('.contatti').click(function(e) {
+    $('.home').fadeOut(400);
+    $('.name').addClass('slidename');
+    $('.galleria').addClass('slidegalleria');
+    $('.chisono').addClass('slidechisono');
+    $('.contatti').addClass('slidecontatti');
+    $('.frame').addClass('slideframe');
+    $('.contacts').delay(400).fadeIn(1000);
+    $('.navbar').delay(400).fadeIn(1000);
+  });
 
-$('.namenavbar').click(function(e) {
-  $('.home').delay(400).fadeIn(1000);
-  $('.navbar').fadeOut();
-  $('.gallery').fadeOut();
-  $('.aboutme').fadeOut();
-  $('.contacts').fadeOut();
+  $('.namenavbar').click(function(e) {
+    $('.home').delay(400).fadeIn(1000);
+    $('.navbar').fadeOut();
+    $('.gallery').fadeOut();
+    $('.aboutme').fadeOut();
+    $('.contacts').fadeOut();
 
-  setTimeout(function() {
-    $('.frame').removeClass('slideframe');
-    $('.name').removeClass("slidename");
-    $('.galleria').removeClass('slidegalleria');
-    $('.chisono').removeClass('slidechisono');
-    $('.contatti').removeClass('slidecontatti');
-  }, 400);
-});
+    setTimeout(function() {
+      $('.frame').removeClass('slideframe');
+      $('.name').removeClass("slidename");
+      $('.galleria').removeClass('slidegalleria');
+      $('.chisono').removeClass('slidechisono');
+      $('.contatti').removeClass('slidecontatti');
+    }, 400);
+  });
 
-$('.gallerianavbar').click(function(e) {
-  $('.aboutme').fadeOut(400);
-  $('.contacts').fadeOut(400);
-  $('.gallery').delay(400).fadeIn(1000);
-});
+  $('.gallerianavbar').click(function(e) {
+    $('.aboutme').fadeOut(400);
+    $('.contacts').fadeOut(400);
+    $('.gallery').delay(400).fadeIn(1000);
+  });
 
-$('.chisononavbar').click(function(e) {
-  $('.gallery').fadeOut(400);
-  $('.contacts').fadeOut(400);
-  $('.aboutme').delay(400).fadeIn(1000);
-});
+  $('.chisononavbar').click(function(e) {
+    $('.gallery').fadeOut(400);
+    $('.contacts').fadeOut(400);
+    $('.aboutme').delay(400).fadeIn(1000);
+  });
 
-$('.contattinavbar').click(function(e) {
-  $('.gallery').fadeOut(400);
-  $('.aboutme').fadeOut(400);
-  $('.contacts').delay(400).fadeIn(1000);
+  $('.contattinavbar').click(function(e) {
+    $('.gallery').fadeOut(400);
+    $('.aboutme').fadeOut(400);
+    $('.contacts').delay(400).fadeIn(1000);
+  });
 });
