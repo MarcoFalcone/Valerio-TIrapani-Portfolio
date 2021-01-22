@@ -1,4 +1,4 @@
-//loader and lightbox//
+//loader//
 $(window).on('load', function() {
   $('.loader').fadeOut(1000);
   $('.content').fadeIn(1000);
@@ -36,6 +36,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('.prima').click(function(e) {
     $('.home').delay(400).fadeIn(1000);
+    $('.footer').delay(400).fadeIn(1000);
     $('.gallery').fadeOut();
     $('.aboutme').fadeOut();
     $('.contacts').fadeOut();
@@ -47,6 +48,7 @@ $(document).ready(function() {
 
   $('.galleria').click(function(e) {
     $('.home').fadeOut(400);
+    $('.footer').fadeOut(400);
     $('.frame').addClass('slideframe');
     $('.gallery').delay(400).fadeIn(1000);
     $('.aboutme').fadeOut(400);
@@ -55,6 +57,7 @@ $(document).ready(function() {
 
   $('.chisono').click(function(e) {
     $('.home').fadeOut(400);
+    $('.footer').fadeOut(400);
     $('.frame').addClass('slideframe');
     $('.aboutme').delay(400).fadeIn(1000);
     $('.gallery').fadeOut(400);
@@ -63,6 +66,7 @@ $(document).ready(function() {
 
   $('.contatti').click(function(e) {
     $('.home').fadeOut(400);
+    $('.footer').fadeOut(400);
     $('.frame').addClass('slideframe');
     $('.contacts').delay(400).fadeIn(1000);
     $('.gallery').fadeOut(400);
