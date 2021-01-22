@@ -114,8 +114,9 @@ body {
 }
 
 .home {
-  width: 100vw;
+  width: 80vw;
   height: 100vh;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,98 +129,85 @@ body {
 }
 
 .main {
-  position: relative;
+  position: absolute;
   height: 85vh;
   min-height: 820px;
   width: 37vw;
   min-width: 690px;
 }
 
-.navbarhome {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.dropdown {
+  position: fixed;
+  left: 2vw;
+  top: 3vh;
+  z-index: 1;
+}
+
+.dropbtn {
+  color: black;
+  font-size: 30px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.links {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  left: -50%;
-  bottom: 3%;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  padding: 10px;
+  border-left: 1px solid black;
+  transition: .3s ease;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.name {
-  font-family: 'Herr Von Muellerhoff', cursive;
-  font-size: 80px;
-  height: 90px;
-  color: dimgray;
-  -webkit-transition: 1s ease;
-  -o-transition: 1s ease;
-  transition: 1s ease;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+.show {
+  opacity: 1;
+  pointer-events: all;
 }
 
+.prima,
 .chisono,
 .galleria,
+.collab,
 .contatti {
-  font-family: 'Redressed', cursive;
+  font-family: Arial;
   width: auto;
-  font-size: 30px;
-  color: dimgray;
+  font-size: 20px;
+  color: black;
   cursor: pointer;
-  -webkit-transition: color .3s;
-  -o-transition: color .3s;
-  transition: color .3s;
-  text-decoration: none;
-  -webkit-transition: 1s ease;
-  -o-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: color .1s;
+  -o-transition: color .1s;
+  transition: color .1s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
+.prima:hover,
 .chisono:hover,
 .galleria:hover,
+.collab:hover,
 .contatti:hover {
   color: black;
 }
 
 
 #preview {
-  border:solid 2px;
-  border-bottom-color:#ffe;
-  border-left-color:#eed;
-  border-right-color:#eed;
-  border-top-color:#ccb;
-  width: 80%;
-  height: 83%;
+  width: 100%;
+  height: 100%;
   position: absolute;
   -webkit-transition: opacity 1.5s linear;
   -o-transition: opacity 1.5s linear;
   transition: opacity 1.5s linear;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
 }
 
 
 .frame {
-  background-color: whitesmoke;
-  border:solid 4vmin #eee;
-  border-bottom-color:#fff;
-  border-left-color:#eee;
-  border-radius:2px;
-  border-right-color:#eee;
-  border-top-color:#fff;
-  -webkit-box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
-          box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
-  -webkit-box-sizing:border-box;
-          box-sizing:border-box;
   display:-webkit-box;
   display:-ms-flexbox;
   display:flex;
@@ -231,7 +219,6 @@ body {
           align-items: center;
   height: 100%;
   width: 100%;
-  padding: 4vmin;
   position: absolute;
   -webkit-transition: 1s ease;
   -o-transition: 1s ease;
@@ -249,70 +236,11 @@ body {
   text-align: center;
 }
 
-.navbar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  margin: 0 auto;
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-around;
-      -ms-flex-pack: space-around;
-          justify-content: space-around;
-}
-
-.bar {
-  display: flex;
-  width: 60%;
-  justify-content: space-around;
-}
-
-.namenavbar {
-  font-size: 80px;
-  font-family: 'Herr Von Muellerhoff', cursive;
-  color: dimgray;
-  cursor: pointer;
-  -webkit-transition: color .3s;
-  -o-transition: color .3s;
-  transition: color .3s;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.gallerianavbar,
-.chisononavbar,
-.contattinavbar {
-  font-family: 'Redressed', cursive;
-  font-size: 30px;
-  color: dimgray;
-  cursor: pointer;
-  -webkit-transition: color .3s;
-  -o-transition: color .3s;
-  transition: color .3s;
-  text-decoration: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.namenavbar:hover,
-.gallerianavbar:hover,
-.chisononavbar:hover,
-.contattinavbar:hover {
-  color: black;
-}
-
 .gallery {
-  width: 100%;
+  position: relative;
+  width: 80%;
   height: auto;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,7 +265,7 @@ body {
 
 #fotogallery {
   height: auto;
-  width: 31.25vw;
+  width: 25vw;
   margin: 5px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -346,8 +274,9 @@ body {
 }
 
 .aboutme {
-  width: 100%;
-  height: 80vh;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -358,7 +287,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 
@@ -374,8 +302,9 @@ body {
 }
 
 .contacts {
-  width: 100%;
-  height: 70vh;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,121 +327,34 @@ body {
           text-decoration: underline dimgray;
 }
 
-.slidename {
-  -webkit-transform: translateX(-200px);
-      -ms-transform: translateX(-200px);
-          transform: translateX(-200px);
-}
-
-.slidegalleria {
-  -webkit-transform: translateX(-150px);
-      -ms-transform: translateX(-150px);
-          transform: translateX(-150px);
-}
-
-.slidechisono {
-  -webkit-transform: translateX(-100px);
-      -ms-transform: translateX(-100px);
-          transform: translateX(-100px);
-}
-
-.slidecontatti {
-  -webkit-transform: translateX(-50px);
-      -ms-transform: translateX(-50px);
-          transform: translateX(-50px);
-}
-
 .slideframe {
   -webkit-transform: translateY(-100px);
       -ms-transform: translateY(-100px);
           transform: translateY(-100px);
 }
 
-@media screen and (min-width: 1920px) {
-  .name {
-    font-family: 'Herr Von Muellerhoff', cursive;
-    font-size: 4.166666666666667vw;
-    height: 9.316770186335404vh;
-  }
-
-  .chisono,
-  .galleria,
-  .contatti {
-    font-family: 'Redressed', cursive;
-    width: auto;
-    font-size: 1.5625vw;
-    color: dimgray;
-    cursor: pointer;
-    -webkit-transition: color .3s;
-    -o-transition: color .3s;
-    transition: color .3s;
-    text-decoration: none;
-    -webkit-transition: 1s ease;
-    -o-transition: 1s ease;
-    transition: 1s ease;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
-}
-
 @media screen and (max-width: 1024px) {
-  .name {
-    font-size: 75px;
+  .links {
+    border: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(10px);
   }
 
   .main {
-    position: relative;
-    top: -10%;
     height: 400px;
     min-height: auto;
     width: 90vw;
-    min-width: auto;
+    min-width: 90vw;
   }
 
-  .navbarhome {
-    left: 0;
-    top: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-
-  .navbar {
+  .gallery {
     width: 100%;
-    -ms-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-  }
-
-  .bar {
-    width: 100%;
-    justify-content: space-around;
-  }
-
-  .namenavbar {
-    margin-left: 0;
-    font-size: 75px;
-    height: 100px;
+    margin-top: 100px;
   }
 
   #fotogallery {
     width: 95vw;
-  }
-
-  .aboutme {
-    height: auto;
-    margin-top: 20px;
   }
 
   .profilo {
@@ -537,10 +379,5 @@ body {
     color: black;
     -webkit-text-decoration: underline dimgray;
             text-decoration: underline dimgray;
-  }
-
-  .footer {
-    top: 0;
-    height: 10px;
   }
 }

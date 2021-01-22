@@ -34,70 +34,62 @@ $(document).ready(function() {
 
 //navigation
 $(document).ready(function() {
-  $('.galleria').click(function(e) {
-    $('.home').fadeOut(400);
-    $('.name').addClass('slidename');
-    $('.galleria').addClass('slidegalleria');
-    $('.chisono').addClass('slidechisono');
-    $('.contatti').addClass('slidecontatti');
-    $('.frame').addClass('slideframe');
-    $('.gallery').delay(400).fadeIn(1000);
-    $('.navbar').delay(400).fadeIn(1000);
-  });
-
-  $('.chisono').click(function(e) {
-    $('.home').fadeOut(400);
-    $('.name').addClass('slidename');
-    $('.galleria').addClass('slidegalleria');
-    $('.chisono').addClass('slidechisono');
-    $('.contatti').addClass('slidecontatti');
-    $('.frame').addClass('slideframe');
-    $('.aboutme').delay(400).fadeIn(1000);
-    $('.navbar').delay(400).fadeIn(1000);
-  });
-
-  $('.contatti').click(function(e) {
-    $('.home').fadeOut(400);
-    $('.name').addClass('slidename');
-    $('.galleria').addClass('slidegalleria');
-    $('.chisono').addClass('slidechisono');
-    $('.contatti').addClass('slidecontatti');
-    $('.frame').addClass('slideframe');
-    $('.contacts').delay(400).fadeIn(1000);
-    $('.navbar').delay(400).fadeIn(1000);
-  });
-
-  $('.namenavbar').click(function(e) {
+  $('.prima').click(function(e) {
     $('.home').delay(400).fadeIn(1000);
-    $('.navbar').fadeOut();
     $('.gallery').fadeOut();
     $('.aboutme').fadeOut();
     $('.contacts').fadeOut();
 
     setTimeout(function() {
       $('.frame').removeClass('slideframe');
-      $('.name').removeClass("slidename");
-      $('.galleria').removeClass('slidegalleria');
-      $('.chisono').removeClass('slidechisono');
-      $('.contatti').removeClass('slidecontatti');
     }, 400);
   });
 
-  $('.gallerianavbar').click(function(e) {
-    $('.aboutme').fadeOut(400);
-    $('.contacts').fadeOut(400);
+  $('.galleria').click(function(e) {
+    $('.home').fadeOut(400);
+    $('.frame').addClass('slideframe');
     $('.gallery').delay(400).fadeIn(1000);
+    $('.aboutme').fadeOut(400);
+    $('.contacts').fadeOut(400);
   });
 
-  $('.chisononavbar').click(function(e) {
+  $('.chisono').click(function(e) {
+    $('.home').fadeOut(400);
+    $('.frame').addClass('slideframe');
+    $('.aboutme').delay(400).fadeIn(1000);
     $('.gallery').fadeOut(400);
     $('.contacts').fadeOut(400);
-    $('.aboutme').delay(400).fadeIn(1000);
   });
 
-  $('.contattinavbar').click(function(e) {
+  $('.contatti').click(function(e) {
+    $('.home').fadeOut(400);
+    $('.frame').addClass('slideframe');
+    $('.contacts').delay(400).fadeIn(1000);
     $('.gallery').fadeOut(400);
     $('.aboutme').fadeOut(400);
-    $('.contacts').delay(400).fadeIn(1000);
   });
 });
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+document.getElementById("dropbtn").onclick = function() {show()};
+
+function show() {
+    document.getElementById("links").classList.toggle("show");
+    document.getElementById("dropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("links");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
