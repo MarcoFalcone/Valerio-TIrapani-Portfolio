@@ -1,0 +1,575 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+  scrollbar-radius: 20px;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+}
+
+.loader {
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 49.5%;
+  top: 48%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.loader div {
+  -webkit-animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  -webkit-transform-origin: 40px 40px;
+      -ms-transform-origin: 40px 40px;
+          transform-origin: 40px 40px;
+}
+
+.loader div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: dimgray;
+  margin: -4px 0 0 -4px;
+}
+
+.loader div:nth-child(1) {
+  -webkit-animation-delay: -0.036s;
+          animation-delay: -0.036s;
+}
+
+.loader div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+
+.loader div:nth-child(2) {
+  -webkit-animation-delay: -0.072s;
+          animation-delay: -0.072s;
+}
+
+.loader div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+
+.loader div:nth-child(3) {
+  -webkit-animation-delay: -0.108s;
+          animation-delay: -0.108s;
+}
+
+.loader div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+
+.loader div:nth-child(4) {
+  -webkit-animation-delay: -0.144s;
+          animation-delay: -0.144s;
+}
+
+.loader div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+
+.loader div:nth-child(5) {
+  -webkit-animation-delay: -0.18s;
+          animation-delay: -0.18s;
+}
+
+.loader div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+
+.loader div:nth-child(6) {
+  -webkit-animation-delay: -0.216s;
+          animation-delay: -0.216s;
+}
+
+.loader div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+
+.loader div:nth-child(7) {
+  -webkit-animation-delay: -0.252s;
+          animation-delay: -0.252s;
+}
+
+.loader div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+
+.loader div:nth-child(8) {
+  -webkit-animation-delay: -0.288s;
+          animation-delay: -0.288s;
+}
+
+.loader div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main {
+  position: absolute;
+  height: 85vh;
+  min-height: 820px;
+  width: 37vw;
+  min-width: 690px;
+}
+
+.dropdown {
+  position: fixed;
+  left: 2vw;
+  top: 3vh;
+  z-index: 1;
+}
+
+.dropbtn {
+  color: black;
+  font-size: 30px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 0;
+  padding: 10px;
+  border-left: 1px solid black;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show {
+  height: 300px;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.prima,
+.chisono,
+.galleria,
+.progetti {
+  text-decoration: none;
+  font-family: Arial;
+  width: auto;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#preview {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: opacity 1.5s linear;
+  -o-transition: opacity 1.5s linear;
+  transition: opacity 1.5s linear;
+  -webkit-box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: -100px;
+  -webkit-animation: enter .5s ease .1s forwards;
+  animation: enter .5s ease .1s forwards;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.gallery {
+  position: relative;
+  top: 1vh;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 5px;
+     -moz-column-gap: 5px;
+          column-gap: 5px;
+  line-height: 0;
+}
+
+.gallery a>img:only-child {
+  /*eliminate extra space at the bottom*/
+  display: block;
+}
+
+#fotogallery {
+  height: auto;
+  width: 100%;
+  margin-bottom: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.projects {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.progetto {
+  cursor: pointer;
+}
+
+.paintedbodies {
+  width: 100vw;
+  height: 100vh;
+}
+
+.back {
+  font-size: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.infoprogetto {
+  width: 80%;
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+.aboutme {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.profilo {
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.txt {
+  font-size: 30px;
+  font-style: italic;
+  text-align: center;
+  width: 60%;
+}
+
+.link {
+  font-size: 30px;
+  font-family: sans-serif;
+  margin-top: 50px;
+  color: black;
+  -webkit-text-decoration: underline dimgray;
+          text-decoration: underline dimgray;
+}
+
+.contatti {
+  position: absolute;
+  text-align: center;
+  left: 10%;
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  font-style: italic;
+  margin-left: -150px;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  -webkit-transition: .7s ease;
+  -o-transition: .7s ease;
+  transition: .7s ease;
+  -webkit-animation: enterleft .6s ease .1s forwards;
+  animation: enterleft .6s ease .1s forwards;
+}
+
+.prox {
+  position: absolute;
+  text-align: center;
+  right: 10%;
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  font-style: italic;
+  margin-right: -150px;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  -webkit-transition: .7s ease;
+  -o-transition: .7s ease;
+  transition: .7s ease;
+  -webkit-animation: enterright .6s ease .1s forwards;
+  animation: enterright .6s ease .1s forwards;
+}
+
+.slideframe {
+  -webkit-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  transform: translateY(-100px);
+}
+
+.slideleft {
+  -webkit-transform: translateX(-150px);
+  -ms-transform: translateX(-150px);
+  transform: translateX(-150px);
+}
+
+.slideright {
+  -webkit-transform: translateX(150px);
+  -ms-transform: translateX(150px);
+  transform: translateX(150px);
+}
+
+@-webkit-keyframes enter {
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes enter {
+  100% {
+    margin-top: 0;
+  }
+}
+
+@-webkit-keyframes enterleft {
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes enterleft {
+  100% {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes enterright {
+  100% {
+    margin-right: 0;
+  }
+}
+
+@keyframes enterright {
+  100% {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .links {
+    border: 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .main {
+    height: 700px;
+    min-height: auto;
+    width: 70vw;
+    min-width: auto;
+  }
+
+  .contatti {
+    top: 10%;
+    font-size: 15px;
+  }
+
+  .prox {
+    top: 10%;
+    font-size: 15px;
+  }
+
+  .gallery {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+    margin-top: 100px;
+  }
+
+  .infoprogetto {
+    text-align: justify;
+  }
+
+  .link {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 500px) {
+    .main {
+      height: 400px;
+      min-height: auto;
+      width: 90vw;
+      min-width: auto;
+    }
+
+    .gallery {
+      -webkit-column-count: 1;
+         -moz-column-count: 1;
+              column-count: 1;
+      width: 90%;
+    }
+
+    .progetto {
+      width: 80%;
+    }
+
+    .infoprogetto {
+      text-align: justify;
+      width: 90%
+    }
+
+    .profilo {
+      width: 70%;
+      height: auto;
+      margin-bottom: 20px;
+      margin-right: 0;
+      padding: 10px;
+    }
+
+    .txt {
+      font-size: 20px;
+      width: 80%;
+      text-align: justify;
+    }
+
+    .link {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+}
