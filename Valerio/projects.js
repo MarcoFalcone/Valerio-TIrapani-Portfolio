@@ -23,11 +23,13 @@ $(window).bind("pageshow", function(event) {
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-document.getElementById("dropbtn").onclick = function() {show()};
+document.getElementById("dropbtn").onclick = function() {
+  show()
+};
 
 function show() {
-    document.getElementById("links").classList.toggle("show");
-    document.getElementById("dropdown").classList.toggle("show");
+  document.getElementById("links").classList.toggle("show");
+  document.getElementById("dropdown").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
