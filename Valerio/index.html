@@ -11,7 +11,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 </head>
 
 <body>
@@ -31,54 +30,34 @@
     <div class="dropdown" id="dropdown">
       <div class="dropbtn" id="dropbtn">&#9660;</div>
       <nav id="links" class="links">
-        <p class="prima">HOME</p>
-        <p class="galleria">GALLERIA</p>
-        <p class="collab">PROGETTI</p>
-        <p class="chisono">CHI SONO</p>
-        <p class="contatti">CONTATTI</p>
+        <a href="index.html" class="prima" target="_self">HOME</a>
+        <a href="gallery.html" class="galleria" target="_self">GALLERIA</a>
+        <a href="projects.html" target="_self" class="progetti">PROGETTI</a>
+        <a href="about.html" target="_self" class="chisono">CHI SONO</a>
       </nav>
     </div>
 
     <div class="home">
+      <section class="contatti">
+        <ul>+39 334 2792 206</ul>
+        <ul><a style="color: black" href="mailto:info@valeriotirapani.it">info@valeriotirapani.it</a></ul>
+      </section>
+      <section class="prox">
+        <p>Prossimi Eventi:</p>
+        <p>-/-/-</p>
+      </section>
       <div class="main">
         <div class="frame">
-          <img id="preview" class="foto" src="images/test.jpg" />
-          <img id="preview" class="foto" src="images/test3.jpg" />
-          <img id="preview" class="foto" src="images/test5.jpg" />
-          <img id="preview" class="foto" src="images/test4.jpg" />
+          <img id="preview" class="foto" src="https://ik.imagekit.io/7ol7k87qcca/Valerio/Galleria/01__GjaNf3gWRAAQ.jpg" />
+          <img id="preview" class="foto" src="https://ik.imagekit.io/7ol7k87qcca/Valerio/Galleria/test_nPIYJA11U5jmu.jpg" />
+          <img id="preview" class="foto" src="https://ik.imagekit.io/7ol7k87qcca/Valerio/Galleria/IMG_20171128_184151_ovLBS7ClawN-zL.jpg" />
+          <img id="preview" class="foto" src="https://ik.imagekit.io/7ol7k87qcca/Valerio/Galleria/galleria-5_-2EQWQeMUC.jpg" />
+          <img id="preview" class="foto" src="https://ik.imagekit.io/7ol7k87qcca/Valerio/Galleria/IMG_20180217_113709_722_gXu6ln5k8ne.jpg" />
+          <img id="preview" class="foto" src="https://ik.imagekit.io/7ol7k87qcca/Valerio/Galleria/Galleria-15_-_f8br2UaoQ.jpg" />
+          <img id="preview" class="foto" src="https://ik.imagekit.io/7ol7k87qcca/Valerio/Galleria/03_UrGkxAdeb9r8_.jpg" />
         </div>
       </div>
     </div>
-
-    <div class="gallery" style="display: none">
-      <a data-fancybox="images" href="https://ik.imagekit.io/7ol7k87qcca/InOktober/Artwork/face_kLAEZuYAwcY3_.png"><img id="fotogallery" src="images/test.jpg"></a>
-      <img id="fotogallery" src="images/1.jpg" />
-      <img id="fotogallery" src="images/test3.jpg" />
-      <img id="fotogallery" src="images/test5.jpg" />
-      <img id="fotogallery" src="images/2.jpg" />
-      <img id="fotogallery" src="images/test4.jpg" />
-      <img id="fotogallery" src="images/3.jpg" />
-      <a data-fancybox="images" href="https://ik.imagekit.io/7ol7k87qcca/Boia/alien_vu0Bi9DXxNzmB.jpg"><img id="fotogallery" src="images/1.jpg" /></a>
-      <a data-fancybox="images" href="https://ik.imagekit.io/7ol7k87qcca/InOktober/Artwork/FLUFFY_RENDER__u3jX7AUr6XEa.jpg"><img id="fotogallery" src="images/test5.jpg" /></a>
-      <a data-fancybox="images" href="https://ik.imagekit.io/7ol7k87qcca/InOktober/Artwork/man_CGDOa6zQRzo2e.png"><img id="fotogallery" src="images/2.jpg" /></a>
-      <img id="fotogallery" src="images/test3.jpg" />
-      <img id="fotogallery" src="images/test4.jpg" />
-      <a data-fancybox="images" href="https://ik.imagekit.io/7ol7k87qcca/InOktober/Artwork/FLUFFY_RENDER__u3jX7AUr6XEa.jpg"><img id="fotogallery" src="images/3.jpg" /></a>
-      <img id="fotogallery" src="images/3.jpg" />
-      <img id="fotogallery" src="images/test.jpg" />
-      <a data-fancybox="images" href="https://ik.imagekit.io/7ol7k87qcca/InOktober/Artwork/1_2SgL2eKCHjLc.png"><img id="fotogallery" src="images/test3.jpg" /></a>
-      <a data-fancybox="images" href="https://ik.imagekit.io/7ol7k87qcca/InOktober/Artwork/blue_wale_j-_SoDU-q3Gdc.png"><img id="fotogallery" src="images/1.jpg" /></a>
-    </div>
-
-    <section class="aboutme" style="display: none">
-      <img class="profilo" src="profilo.jpg" />
-      <p class="txt">Sono nato a Roma nell’aprile del ’90. Ho frequentato il Liceo Artistico Ripetta. Dipingo vivo e lavoro a Roma. Autodidatta.</p>
-    </section>
-
-    <section class="contacts" style="display: none">
-      <p>+39 334 2792 206</p>
-      <a href="mailto:info@valeriotirapani.it">info@valeriotirapani.it</a>
-    </section>
 
     <footer class="footer">&copy; 2020 | Valerio Tirapani</footer>
   </div>

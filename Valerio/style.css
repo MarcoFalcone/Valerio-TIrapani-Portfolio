@@ -21,10 +21,6 @@
   border-radius: 20px;
 }
 
-body {
-  background: url(images/back.png);
-}
-
 .loader {
   display: inline-block;
   position: absolute;
@@ -114,7 +110,7 @@ body {
 }
 
 .home {
-  width: 80vw;
+  width: 100vw;
   height: 100vh;
   margin: auto;
   display: -webkit-box;
@@ -155,46 +151,36 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 300px;
+  height: 0;
   padding: 10px;
   border-left: 1px solid black;
-  transition: .3s ease;
+  transition: .5s ease;
   opacity: 0;
   pointer-events: none;
 }
 
 .show {
+  height: 300px;
   opacity: 1;
   pointer-events: all;
 }
 
+
 .prima,
 .chisono,
 .galleria,
-.collab,
-.contatti {
+.progetti {
+  text-decoration: none;
   font-family: Arial;
   width: auto;
   font-size: 20px;
   color: black;
   cursor: pointer;
-  -webkit-transition: color .1s;
-  -o-transition: color .1s;
-  transition: color .1s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-
-.prima:hover,
-.chisono:hover,
-.galleria:hover,
-.collab:hover,
-.contatti:hover {
-  color: black;
-}
-
 
 #preview {
   width: 100%;
@@ -220,13 +206,16 @@ body {
   height: 100%;
   width: 100%;
   position: absolute;
-  -webkit-transition: 1s ease;
-  -o-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .5s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+          margin-top: -100px;
+          -webkit-animation: enter .5s ease .1s forwards;
+          animation: enter .5s ease .1s forwards;
 }
 
 .footer {
@@ -261,6 +250,42 @@ body {
           user-select: none;
 }
 
+.projects {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.progetto {
+  cursor: pointer;
+}
+
+.paintedbodies {
+  width: 100vw;
+  height: 100vh;
+}
+
+.back {
+  font-size: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.infoprogetto {
+  width: 80%;
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+}
+
 .aboutme {
   width: 80%;
   height: 100vh;
@@ -286,39 +311,85 @@ body {
 
 .txt {
   font-size: 30px;
+  font-style: italic;
+  text-align: center;
   width: 60%;
 }
 
-.contacts {
-  width: 80%;
-  height: 100vh;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 50px;
+.link {
+  font-size: 30px;
+  font-family: sans-serif;
+  margin-top: 50px;
+  color: black;
+  text-decoration: underline dimgray;
 }
 
-.contacts a {
-  color: black;
-  -webkit-text-decoration: underline dimgray;
-          text-decoration: underline dimgray;
+.contatti {
+  position: absolute;
+  text-align: center;
+  left: 10%;
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  font-style: italic;
+  margin-left: -150px;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .7s ease;
+  -webkit-animation: enterleft .6s ease .1s forwards;
+  animation: enterleft .6s ease .1s forwards;
+}
+
+.prox {
+  position: absolute;
+  text-align: center;
+  right: 10%;
+  width: auto;
+  height: auto;
+  font-size: 30px;
+  font-style: italic;
+  margin-right: -150px;
+  -webkit-transition: .5s ease;
+  -o-transition: .5s ease;
+  transition: .7s ease;
+  -webkit-animation: enterright .6s ease .1s forwards;
+  animation: enterright .6s ease .1s forwards;
 }
 
 .slideframe {
   -webkit-transform: translateY(-100px);
       -ms-transform: translateY(-100px);
           transform: translateY(-100px);
+}
+
+.slideleft {
+  -webkit-transform: translateX(-150px);
+      -ms-transform: translateX(-150px);
+          transform: translateX(-150px);
+}
+
+.slideright {
+  -webkit-transform: translateX(150px);
+      -ms-transform: translateX(150px);
+          transform: translateX(150px);
+}
+
+@keyframes enter {
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes enterleft {
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes enterright {
+  100% {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -337,9 +408,27 @@ body {
     min-width: auto;
   }
 
+  .contatti {
+    top: 10%;
+    font-size: 15px;
+  }
+
+  .prox {
+    top: 10%;
+    font-size: 15px;
+  }
+
   .gallery {
     column-count: 2;
     margin-top: 100px;
+  }
+
+  .infoprogetto {
+    text-align: justify;
+  }
+
+  .link {
+    text-align: center;
   }
 
   @media screen and (max-width: 500px) {
@@ -350,33 +439,38 @@ body {
       min-width: auto;
     }
 
+
     .gallery {
       column-count: 1;
       width: 90%;
     }
-  }
 
-  .profilo {
-    width: 70%;
-    height: auto;
-    margin-bottom: 20px;
-    margin-right: 0;
-    padding: 10px;
-  }
+    .progetto {
+      width: 80%;
+    }
 
-  .txt {
-    font-size: 20px;
-    width: 80%;
-    text-align: justify;
-  }
+    .infoprogetto {
+      text-align: justify;
+      width: 90%
+    }
 
-  .contacts {
-    font-size: 30px;
-  }
+    .profilo {
+      width: 70%;
+      height: auto;
+      margin-bottom: 20px;
+      margin-right: 0;
+      padding: 10px;
+    }
 
-  .contacts a {
-    color: black;
-    -webkit-text-decoration: underline dimgray;
-            text-decoration: underline dimgray;
-  }
+    .txt {
+      font-size: 20px;
+      width: 80%;
+      text-align: justify;
+    }
+
+    .link {
+      font-size: 20px;
+      text-align: center;
+    }
+}
 }
