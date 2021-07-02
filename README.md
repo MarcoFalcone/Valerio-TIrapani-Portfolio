@@ -1,4 +1,4 @@
-# Valerio-TIrapani-Portfolio
+# Valerio Tirapani
 
 A Portfolio to showcase the work of the artist and good friend of mine Valerio Tirapani.
 
